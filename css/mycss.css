@@ -1,0 +1,111 @@
+body{
+	margin: 0;
+	padding: 0;
+	/*cursor:url("http://icons.iconarchive.com/icons/musett/dragon-ballz/48/Dragon-Radar-icon.png"), auto;*/
+}
+
+#gameScreen{
+	position: relative;
+	height: 100vh;
+	width: 100wh; 
+	background-color: rgb(135,206,250);
+}
+
+.sphere{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+
+#container{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+}
+
+#menu{
+	position: absolute;
+	border:2px solid rgb(255,30,0);
+	width: 70%;
+	height: 40%;
+	top: 20%;
+	left: 15%;
+	background-color: rgb(255,153,0);
+	
+}
+
+#menu_content{
+	margin-left: 2%;
+}
+
+h1{
+	color: rgb(204,0,0);
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#startText{
+	color: white;
+	font-size: 150%;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#play_button{
+	position: absolute;
+	bottom: 10%;
+}
+
+#instructions{
+	padding-top: 2%;
+	color: rgb(204,0,0);
+	font-size: 130%;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#warning{
+	text-align: center;
+	width: 35%;
+	height: 15%;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 130%;
+	border:2px solid rgb(255,30,0);
+	margin-top: 3%;
+	color: rgb(204,0,0);
+	opacity: 0.8;
+}
+
+#warning p{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#score_space{
+	position: absolute;
+	top: 2%;
+	left: 89%;
+	width: 10%;
+	text-align: right;
+	color: rgb(204,0,0);
+	font-size: 200%;
+}
+
+#score{
+	font-size: 180%;
+}
+
+#menu2{
+	position: absolute;
+	border:2px solid rgb(255,30,0);
+	width: 70%;
+	height: 25%;
+	top: 20%;
+	left: 15%;
+	background-color: rgb(255,153,0);
+	
+}
+
+#play_again{
+	position: absolute;
+	bottom: 10%;
+}
