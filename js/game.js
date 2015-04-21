@@ -1,7 +1,7 @@
 var mouseX = 0;
 var mouseY = 0;
 var currentDate;
-var gameLength = 10;	//in seconds
+var gameLength = 300;	//in seconds
 var sphereFound = 0; 
 var gameEnded = false;
 var soundRepeater;
@@ -21,33 +21,13 @@ jQuery.fn.center = function () {
 
 
 $(document).ready(function(){
-	/*var height = parseInt($(window).height()) ;
-	var width = parseInt($(window).width());
-	var ballSize = 50;
-	var ballX = getRandomBetween(0, height - ballSize);
-	var ballY = getRandomBetween(0, width - ballSize);
-	$("#container").click(function(){
-		$("#container").center();
-        $("#container").animate({height: "100px", width: "100px", opacity: 1},{speed: "slow"});
-    });
-	//$('#object').css('top', ballX);
-	//$('#object').css('left', ballY);
-	$('#container').css('top', ballX);
-	$('#container').css('left', ballY);
-	$('#container').css('opacity', 0.1);
-	//$('#container').click(function(){alert("a");});
-	//$('#object').click(function(){alert("a");});
-	timer();
-    setGameScreenHandlers();*/
-    createMenu();
-    
+	createMenu();
 });
 
 function hideBall(num){
 	var width = parseInt($(window).width()) - parseInt($('#score_space').outerWidth());
 	var height = parseInt($(window).height()) - parseInt($('#score_space').outerHeight());
-	//alert(parseInt($(window).width()));
-	//alert(parseInt($(window).height()));
+	
 	ballY = getRandomBetween(0, height - ballSize);
 	ballX = getRandomBetween(0, width - ballSize);
 	
@@ -178,7 +158,7 @@ function winMenu(message){
 	
 	$('#play_again').click(function(){
 		$('#menu2').remove();     //undraw the menu
-		gameLength = 500;
+		gameLength = 300;
 		sphereFound = 0;
 		/** Draw Score **/
 		var scoreDiv = document.getElementById("score_space");
@@ -207,20 +187,15 @@ function updateTimer(){
 
 function trackCursor(event){
 	if ($("#gameScreen:hover").length != 0){
-		//console.log(mouseX + ' ' + mouseY);
 		//change beep frequency here according to the hidden ball location
 		if((mouseX >= ballX) && (mouseX <= ballX + ballSize) && (mouseY >= ballY) && (mouseY <= ballY + ballSize)){
 			audioName = "sounds/beep1000.wav";
-			console.log("1000");
 		}else if((mouseX >= ballX - regionDifferenceWidth/2) && (mouseX <= ballX + ballSize + regionDifferenceWidth/2) && (mouseY >= ballY - regionDifferenceWidth/2) && (mouseY <= ballY + ballSize + regionDifferenceWidth/2)){
 			audioName = "sounds/beep500.wav";
-			console.log("500");
 		}else if((mouseX >= ballX - 2*regionDifferenceWidth) && (mouseX <= ballX + ballSize + 2*regionDifferenceWidth) && (mouseY >= ballY - 2*regionDifferenceWidth) && (mouseY <= ballY + ballSize + 2*regionDifferenceWidth)){
 			audioName = "sounds/beep200.wav";
-			console.log("200");
 		}else{
 			audioName = "sounds/beep.wav";
-			console.log("0");
 		}
 		
 		
