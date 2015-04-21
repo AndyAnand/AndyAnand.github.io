@@ -94,7 +94,7 @@ function createMenu(){
 	
 	var instructions = document.createElement("p");
 	instructions.setAttribute("id", "instructions");
-	instructions.innerHTML = "By moving the Dragon Radar designed by Bulma, help Goku to find all the seven dragon balls guided by the sound they emit!";
+	instructions.innerHTML = "By moving the Dragon Radar designed by Bulma, help Goku to find all the seven dragon balls guided by the sound the radar emits!";
 	
 	var warning = document.createElement("div");
 	warning.setAttribute("id", "warning");
