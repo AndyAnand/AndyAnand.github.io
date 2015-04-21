@@ -6,7 +6,7 @@ var sphereFound = 0;
 var gameEnded = false;
 var soundRepeater;
 var timeRepeater;
-var beepFrequency = 50;
+var beepFrequency = 500;
 var ballSize = 50;
 var ballX = 0;
 var ballY = 0;
